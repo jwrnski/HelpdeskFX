@@ -14,7 +14,7 @@ public class EmployeeCreation implements Serializable{
 
     static JsonFileAppender json = new JsonFileAppender();
 
-    public static void createEmployee(String name, int id, String department,String division) throws IOException {
+    public static void createEmployee(String name, int id, String department, String division) throws IOException {
         switch (department){
             case "Production" ->{
                 Production productionEmployee = new Production(name, id, division);
@@ -34,7 +34,7 @@ public class EmployeeCreation implements Serializable{
 
         }
     }
-    public static int assignID(String department, int x){
+    /*public static int assignID(String department, int x){
         int ID = 0;
         switch (department){
             case "Production" -> {
@@ -48,7 +48,7 @@ public class EmployeeCreation implements Serializable{
             }
         }
         return ID;
-    }
+    }*/
     public static void saveToJSON(Object employee) throws IOException {
         String fileName = employee.getClass().getSimpleName() + "Employees.json";
         String filePath = "C:\\Users\\Kuba\\Desktop\\HelpdeskFX\\src\\main\\java\\Employees\\" + fileName;

@@ -13,9 +13,7 @@ public class Production extends Employee implements Serializable {
     Production(){
 
     }
-    public int getID(){
-        return ID;
-    }
+
     public String toString(){
         return "ID number: " + this.ID + "\nName: " + this.name +
                 "\nDepartment: " + department + "\nDivision: " + this.division;

@@ -39,13 +39,15 @@ public class MainWindow extends Application implements Initializable, Serializab
         }
     }
 
+    @FXML
     public void mainController(ActionEvent actionEvent){
-        String name = IDValidator.name;
-        helloLabel.setText("Hello " + name);
+
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        String name = IDValidator.name;
+        helloLabel.setText("Hello " + name + "!");
 
     }
 }

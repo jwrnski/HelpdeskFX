@@ -1,5 +1,6 @@
 package GUI;
 
+import Main.IDValidator;
 import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -37,7 +38,7 @@ public class RegisterWindow extends Application implements Initializable, Serial
 
     public String name = "", department = "", division = "";
     public String [] departments = {"Production", "Office", "IT"};
-    public int id = 0, x, test;
+    public int id, x, test;
     public Exception nameError = new Exception();
 
     @Override
@@ -98,19 +99,29 @@ public class RegisterWindow extends Application implements Initializable, Serial
         }
         else
             name = nameCheck;
+        department = departmentChoiceBox.getValue();
         try{
             test = Integer.parseInt(idTextBox.getText());
             if(!(test > 10000 && test < 30999)){
                 errorLabel.setText("Incorrect ID!");
                 idTextBox.clear();
             }
-            else x = test;
+            if(test == 0){
+                errorLabel.setText("Enter your ID!");
+                idTextBox.clear();
+            }
+            else{
+                boolean contains = IDValidator.validateFromJSON(test);
+                if(contains){
+                    errorLabel.setText("User with this ID already exists!");
+                    idTextBox.clear();
+                }
+                else id = test;
+            }
         }
         catch (NumberFormatException e){
             errorLabel.setText("Incorrect ID!");
         }
-        department = departmentChoiceBox.getValue();
-        id = Main.EmployeeCreation.assignID(department, x);
         division = divisionChoiceBox.getValue();
         if(name != null && id != 0 && department != null && division != null && !error){
             Main.EmployeeCreation.createEmployee(name, id, department, division);

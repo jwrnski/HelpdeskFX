@@ -54,38 +54,36 @@ public class LoginWindow extends Application {
     }
 
     public void loginButtonClick(ActionEvent actionEvent){
-        idLoginField.focusedProperty().addListener((arg0, oldValue, newValue) ->{
-            if(!newValue)
-                try{
-                    id = Integer.parseInt(idLoginField.getText());
-                    if(id == 0){
-                        errorLabel.setText("Enter your ID!");
-                        idLoginField.clear();
-                    }
-                    if(!(id > 10000 && id < 30999)){
-                        errorLabel.setText("Incorrect ID!");
-                        idLoginField.clear();
-                    }
-                    else {
-                        boolean contains = IDValidator.validateFromJSON(id);
-                        if(contains){
-                            errorLabel.setText("Login successful!");
 
-                            changeToMainWindow(actionEvent);
-                        }
-                        else {
-                            errorLabel.setText("No user with whis ID.");
-                            idLoginField.clear();
-                        }
-                    }
+        try{
+            id = Integer.parseInt(idLoginField.getText());
+            if(id == 0){
+                errorLabel.setText("Enter your ID!");
+                idLoginField.clear();
+            }
+            if(!(id > 10000 && id < 30999)){
+                errorLabel.setText("Incorrect ID!");
+                idLoginField.clear();
+            }
+            else {
+                boolean contains = IDValidator.validateFromJSON(id);
+                if(contains){
+                    errorLabel.setText("Login successful!");
+
+                    changeToMainWindow(actionEvent);
                 }
-                catch (NumberFormatException e){
-                    errorLabel.setText("Incorrect ID!");
+                else {
+                    errorLabel.setText("No user with whis ID.");
                     idLoginField.clear();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
                 }
-        });
+            }
+        }
+        catch (NumberFormatException e){
+            errorLabel.setText("Incorrect ID!");
+            idLoginField.clear();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void changeToMainWindow(ActionEvent actionEvent){

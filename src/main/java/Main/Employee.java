@@ -18,4 +18,8 @@ public class Employee implements Serializable {
     Employee(){
 
     }
+
+    public int checkID() {
+        return this.ID;
+    }
 }

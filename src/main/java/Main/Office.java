@@ -13,9 +13,6 @@ public class Office extends Employee implements Serializable {
     Office(){
 
     }
-    public int getID(){
-        return this.ID;
-    }
     public String toString(){
         return "ID number: " + this.ID + "\nName: " + this.name +
                 "\nDepartment: " + department + "\nDivision: " + this.division;

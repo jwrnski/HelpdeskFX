@@ -14,9 +14,6 @@ public class IT extends Employee implements Serializable {
 
     }
 
-    public int getID(){
-        return ID;
-    }
     public String toString(){
         return "ID number: " + this.ID + "\nName: " + this.name +
                 "\nDepartment: " + department + "\nDivision: " + this.division;
