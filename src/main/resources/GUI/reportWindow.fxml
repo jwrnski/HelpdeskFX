@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ReportWindow">
+   <children>
+      <TextField fx:id="subjectTextField" layoutX="35.0" layoutY="39.0" prefHeight="33.0" prefWidth="219.0" promptText="Subject of your report.">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="34.0" layoutY="14.0" prefHeight="25.0" prefWidth="74.0" text="Subject:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="72.0" prefHeight="25.0" prefWidth="86.0" text="Description:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descriptionTextArea" layoutX="35.0" layoutY="97.0" prefHeight="90.0" prefWidth="219.0" promptText="Describe your issue.">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="35.0" layoutY="187.0" prefHeight="25.0" prefWidth="57.0" text="Priority:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="priorityBox" layoutX="35.0" layoutY="212.0" prefHeight="25.0" prefWidth="219.0" />
+      <Button fx:id="submitButton" layoutX="94.0" layoutY="251.0" mnemonicParsing="false" onAction="#mainController" prefHeight="25.0" prefWidth="102.0" text="Submit">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" contentDisplay="CENTER" layoutX="37.0" layoutY="294.0" prefHeight="25.0" prefWidth="219.0" textFill="RED" />
+   </children>
+</Pane>

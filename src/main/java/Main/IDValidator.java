@@ -12,7 +12,7 @@ import java.util.stream.IntStream;
 public class IDValidator {
 
     public static String name;
-
+    public static int ID;
     public static boolean validateFromList(Object o){
         boolean contains;
         contains = EmployeeCreation.employeeList.contains(o);
@@ -27,6 +27,7 @@ public class IDValidator {
     }
 
     public static boolean validateFromJSON(int id) throws IOException {
+        ID = id;
         boolean contains;
         String fileName;
         String department = checkDepartment(id);

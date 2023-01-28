@@ -11,15 +11,15 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="timeLabel" layoutX="387.0" layoutY="8.0" prefHeight="30.0" prefWidth="195.0">
+      <Label fx:id="timeLabel" layoutX="431.0" layoutY="8.0" prefHeight="30.0" prefWidth="151.0">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ListView layoutX="149.0" layoutY="60.0" prefHeight="318.0" prefWidth="424.0" />
-      <Button layoutX="14.0" layoutY="88.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Button" />
-      <Button layoutX="15.0" layoutY="146.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Button" />
-      <Button layoutX="15.0" layoutY="200.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" text="Button" />
-      <Button fx:id="logoutButton" layoutX="18.0" layoutY="353.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="120.0" text="Logout" />
+      <ListView layoutX="27.0" layoutY="61.0" orientation="HORIZONTAL" prefHeight="277.0" prefWidth="547.0" />
+      <Button fx:id="logoutButton" layoutX="516.0" layoutY="361.0" mnemonicParsing="false" onAction="#logoutController" prefHeight="25.0" prefWidth="70.0" text="Logout" />
+      <Button fx:id="newReportButton" layoutX="27.0" layoutY="361.0" mnemonicParsing="false" onAction="#newReport" prefHeight="25.0" prefWidth="107.0" text="New Report" />
+      <Button layoutX="156.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Change" />
+      <Button layoutX="286.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Delete" />
    </children>
 </Pane>

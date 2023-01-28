@@ -1,16 +1,6 @@
 [ {
-  "name" : "Jakub",
-  "department" : "Production",
-  "ID" : 10111,
-  "division" : "Processing"
-}, {
-  "name" : "oskar",
+  "name" : "Oskar",
   "department" : "Production",
   "ID" : 10123,
   "division" : "Assembly"
-}, {
-  "name" : "Jakub",
-  "department" : "Production",
-  "ID" : 10342,
-  "division" : "Processing"
 } ]

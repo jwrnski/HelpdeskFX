@@ -33,7 +33,7 @@
             <Font size="16.0" />
          </font>
       </Button>
-      <Label fx:id="errorLabel" layoutX="28.0" layoutY="276.0" prefHeight="17.0" prefWidth="209.0" textFill="#d90a0a">
+      <Label fx:id="errorLabel" contentDisplay="CENTER" layoutX="28.0" layoutY="276.0" prefHeight="20.0" prefWidth="236.0" textFill="#d90a0a">
          <font>
             <Font size="14.0" />
          </font>

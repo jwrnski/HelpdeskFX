@@ -88,13 +88,15 @@ public class LoginWindow extends Application {
 
     public void changeToMainWindow(ActionEvent actionEvent){
         PauseTransition pause = new PauseTransition();
-        pause.setDuration(Duration.seconds(1));
+        pause.setDuration(Duration.seconds(0.5));
         pause.setOnFinished(event -> {
             try {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(RegisterWindow.class.getResource("mainWindow.fxml")));
                 Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
+                stage.setTitle("Helpdesk");
                 stage.setScene(scene);
+                Platform.runLater(root::requestFocus);
                 stage.show();
             }
             catch (Exception e){
@@ -108,7 +110,9 @@ public class LoginWindow extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("registerWindow.fxml")));
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
+        stage.setTitle("Helpdesk - Register");
         stage.setScene(scene);
+        Platform.runLater(root::requestFocus);
         stage.show();
 
     }

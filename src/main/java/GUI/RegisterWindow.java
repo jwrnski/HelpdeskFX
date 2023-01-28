@@ -140,7 +140,9 @@ public class RegisterWindow extends Application implements Initializable, Serial
                 Parent root = FXMLLoader.load(Objects.requireNonNull(RegisterWindow.class.getResource("loginWindow.fxml")));
                 Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
+                stage.setTitle("Helpdesk - Login");
                 stage.setScene(scene);
+                Platform.runLater(root::requestFocus);
                 stage.show();
             }
             catch (Exception e){
