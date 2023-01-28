@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="180.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginWindow">
+   <children>
+      <Label alignment="CENTER" layoutX="55.0" layoutY="28.0" prefHeight="26.0" prefWidth="27.0" text="ID:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idLoginField" layoutX="82.0" layoutY="28.0" onAction="#loginButtonClick" promptText="Enter your ID number" />
+      <Button fx:id="loginButton" layoutX="98.0" layoutY="64.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="30.0" prefWidth="116.0" text="Login">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="registerButton" layoutX="98.0" layoutY="106.0" mnemonicParsing="false" onAction="#registerButtonClick" prefHeight="27.0" prefWidth="116.0" text="Register">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="82.0" layoutY="148.0" prefHeight="17.0" prefWidth="149.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

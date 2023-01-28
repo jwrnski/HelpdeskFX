@@ -1,0 +1,13 @@
+Aplikacja typu Helpdesk.
+Wersja dla pracowników zgłaszających błędy i ludzi je obsługujących.
+Przechowywanie listy pracowników i zgłoszeń w pliku json?
+Zgłaszanie wszelkich problemów technicznych.
+Firma, kilka działów, różne stanowiska na dziale.
+Zgłoszenie z odpowiedniego działu/stanowiska zostaje zgłoszone odpowiedniej osobie.
+Główna klasa Employee, podrzędne klasy dla pracowników z różnych działów.
+Interfejs do zgłoszania problemów i interfejs do ich obsługi.
+Generowanie tzw. unikatowego ticketa dla danego działu.
+Możliwość wyboru priorytetu problemu (normal, urgent).
+Zgłoszenia zostają dodane do kolejki z danego działu.
+Kilka stanów zgłoszenia (oczekujące, obłsugiwane, zakończone).
+Klasa generyczna dla listy/kolejki zgłoszeń. Dodatkowa lista/kolejka dla złoszeń proprytetowych.

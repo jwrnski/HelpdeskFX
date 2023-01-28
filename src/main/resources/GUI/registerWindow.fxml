@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="309.0" prefWidth="285.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.RegisterWindow">
+   <children>
+      <Label layoutX="69.0" layoutY="14.0" prefHeight="20.0" prefWidth="50.0" text="Name:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextBox" layoutX="67.0" layoutY="39.0" onAction="#registerHandler" promptText="Enter your name" />
+      <Label layoutX="68.0" layoutY="64.0" prefHeight="25.0" prefWidth="29.0" text="ID:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTextBox" layoutX="66.0" layoutY="89.0" onAction="#registerHandler" promptText="Enter your ID number" />
+      <Label layoutX="65.0" layoutY="114.0" prefHeight="25.0" prefWidth="92.0" text="Department:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="164.0" prefHeight="25.0" prefWidth="65.0" text="Division:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="registerButton" layoutX="94.0" layoutY="225.0" mnemonicParsing="false" onAction="#registerHandler" prefHeight="35.0" prefWidth="92.0" text="Register">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorLabel" layoutX="28.0" layoutY="276.0" prefHeight="17.0" prefWidth="209.0" textFill="#d90a0a">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="departmentChoiceBox" layoutX="68.0" layoutY="139.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="divisionChoiceBox" layoutX="68.0" layoutY="189.0" prefWidth="150.0" />
+      <Button fx:id="idHelpButton" layoutX="218.0" layoutY="89.0" mnemonicParsing="false" onAction="#idHelpHandler" prefHeight="25.0" prefWidth="29.0" text="?">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
