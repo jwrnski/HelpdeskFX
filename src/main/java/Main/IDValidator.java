@@ -7,8 +7,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.stream.IntStream;
 
 public class IDValidator {
+
+    public static String name;
 
     public static boolean validateFromList(Object o){
         boolean contains;
@@ -39,6 +42,11 @@ public class IDValidator {
                     ArrayList<Production> ProdemployeeList = mapper.readerForListOf(Production.class).readValue(arrayString);
                     contains = ProdemployeeList.stream().anyMatch(p -> p.getID() == id);
                     //for (Production emp : ProdemployeeList) System.out.println(emp + "\n");
+                    if(contains){
+                        for(int i = 0; i<ProdemployeeList.size(); i++)
+                            if(ProdemployeeList.get(i).ID == id)
+                                name = ProdemployeeList.get(i).name;
+                    }
                     return contains;
                 }
                 case "Office" -> {

@@ -70,6 +70,7 @@ public class LoginWindow extends Application {
                         boolean contains = IDValidator.validateFromJSON(id);
                         if(contains){
                             errorLabel.setText("Login successful!");
+
                             changeToMainWindow(actionEvent);
                         }
                         else {
